@@ -1,4 +1,4 @@
-class Employee:
+class Emp:
     def __init__(self, emp_id, name, age, salary):
         self.emp_id = emp_id
         self.name = name
@@ -6,35 +6,31 @@ class Employee:
         self.salary = salary
 
 
-employee1 = Employee(emp_id="161E90", name="Ramu", age=35, salary=59000)
-employee2 = Employee(emp_id="171E22", name="Tejas", age=30, salary=82100)
-employee3 = Employee(emp_id="171G55", name="Abhi", age=25, salary=100000)
-employee4 = Employee(emp_id="151K46", name="Jaya", age=32, salary=85000)
+e1 = Emp(emp_id="161E90", name="Ramu", age=35, salary=59000)
+e2 = Emp(emp_id="171E22", name="Tejas", age=30, salary=82100)
+e3 = Emp(emp_id="171G55", name="Abhi", age=25, salary=100000)
+e4 = Emp(emp_id="151K46", name="Jaya", age=32, salary=85000)
 
-print("Employee ID:", employee1.emp_id)
-print("Name:", employee1.name)
-print("Age:", employee1.age)
-print("Salary (PM):", employee1.salary)
 
-employees = [employee1, employee2, employee3, employee4]
+emps = [e1, e2, e3, e4]
 
 
 print("press 1 to sort by age")
 print("press 2 to sort by name")
 print("press 3 to sort by salary")
-x=int(input("enter here"))
-if x == 1:
-    sorted_employees = sorted(employees, key=lambda emp: emp.age1)
-elif x == 2:
-    sorted_employees = sorted(employees, key=lambda emp: emp.name)
-elif x == 3:
-    sorted_employees = sorted(employees, key=lambda emp: emp.salary)
+a=int(input("enter here"))
+if a == 1:
+    sorted_emps = sorted(emps, key=lambda emp: emp.age)
+elif a == 2:
+    sorted_emps = sorted(emps, key=lambda emp: emp.name)
+elif a == 3:
+    sorted_emps = sorted(emps, key=lambda emp: emp.salary)
 else:
     print("Invalid input")
 
 # Print sorted employees
 #  
-for emp in sorted_employees:
+for emp in sorted_emps:
     print("Employee ID:", emp.emp_id)
     print("Name:", emp.name)
     print("Age:", emp.age)
